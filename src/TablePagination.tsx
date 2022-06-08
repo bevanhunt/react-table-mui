@@ -40,7 +40,7 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
   const useStyles = makeStyles((theme: Theme) => createStyles({
     root: {
       flexShrink: 0,
-      marginLeft: theme.spacing(2.5),
+      // marginLeft: theme.spacing(2.5),
     },
   }));
   const classes = useStyles();
