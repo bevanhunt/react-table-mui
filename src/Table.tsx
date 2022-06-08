@@ -54,6 +54,9 @@ import {
   TableLabel,
   TableRow,
   TableTable,
+  TableFooter,
+  TableFooterRow,
+  TableFooterCell,
   useStyles,
 } from './TableStyles';
 import { TableToolbar } from './TableToolbar';
@@ -197,7 +200,7 @@ export function Table<T extends Record<string, unknown>>(props: PropsWithChildre
   );
 
   const {
-    getTableProps, headerGroups, getTableBodyProps, page, prepareRow, state,
+    getTableProps, headerGroups, footerGroups, getTableBodyProps, page, prepareRow, state,
   } = instance;
   const debouncedState = useDebounce(state, 500);
 
@@ -326,6 +329,15 @@ export function Table<T extends Record<string, unknown>>(props: PropsWithChildre
             );
           })}
         </TableBody>
+        <TableFooter>
+        {footerGroups.map(group => (
+          <TableFooterRow {...group.getFooterGroupProps()}>
+            {group.headers.map(column => (
+              <TableFooterCell {...column.getFooterProps()}>{column.render('Footer')}</TableFooterCell>
+            ))}
+          </TableFooterRow>
+        ))}
+        </TableFooter>
       </TableTable>
       <TablePagination<T> instance={instance} />
     </>

@@ -18,6 +18,8 @@ import MuiTableHead from '@mui/material/TableHead';
 import { TableHeadTypeMap } from '@mui/material/TableHead/TableHead';
 import MuiTableRow from '@mui/material/TableRow';
 import { TableRowTypeMap } from '@mui/material/TableRow/TableRow';
+import MuiTableFooter from '@mui/material/TableFooter';
+import { TableFooterTypeMap } from '@mui/material/TableFooter/TableFooter';
 import cx from 'classnames';
 import React, { CSSProperties } from 'react';
 
@@ -27,10 +29,25 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     border: '1px solid rgba(224, 224, 224, 1)',
     width: '100%',
   },
+  tableFooter: {},
+  tableFooterRow:{
+    textAlign: 'center',
+    borderTop: '1px solid rgba(224, 224, 224, 1)',
+  },
+  tableFooterCell: {
+    padding: '16px 1px 16px 16px',
+    fontSize: '0.875rem',
+    textAlign: 'left',
+    verticalAlign: 'inherit',
+    fontWeight: 500,
+    lineHeight: '1.5rem',
+    borderRight: '1px solid rgba(224, 224, 224, 1)',
+    '&:last-child': {
+      borderRight: 'none',
+    },
+  },
   tableHead: {},
   tableHeadRow: {
-    // backgroundColor: theme.palette.background.paper,
-    // color: theme.palette.text.primary,
     borderBottom: '1px solid rgba(224, 224, 224, 1)',
     '&:hover $resizeHandle': {
       opacity: 1,
@@ -41,7 +58,6 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     fontSize: '0.875rem',
     textAlign: 'left',
     verticalAlign: 'inherit',
-    // color: theme.palette.text.primary,
     fontWeight: 500,
     lineHeight: '1.5rem',
     borderRight: '1px solid rgba(224, 224, 224, 1)',
@@ -79,7 +95,6 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     fontWeight: 300,
     lineHeight: 1.3,
     verticalAlign: 'inherit',
-    // color: theme.palette.text.primary,
     borderRight: '1px solid rgba(224, 224, 224, 1)',
     '&:last-child': {
       borderRight: 'none',
@@ -90,8 +105,6 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     cursor: 'col-resize',
     zIndex: 100,
     opacity: 0,
-    // borderLeft: `1px solid ${theme.palette.primary.light}`,
-    // borderRight: `1px solid ${theme.palette.primary.light}`,
     height: '50%',
     top: '25%',
     transition: 'all linear 100ms',
@@ -100,7 +113,6 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     '&.handleActive': {
       opacity: 1,
       border: 'none',
-      // backgroundColor: theme.palette.primary.light,
       height: 'calc(100% - 4px)',
       top: '2px',
       right: -1,
@@ -159,6 +171,33 @@ export const TableBody: React.FC<Partial<TableBodyTypeMap> & CN> = ({ children, 
     <MuiTableBody className={cx(className, classes.tableBody)} {...rest}>
       {children}
     </MuiTableBody>
+  );
+};
+
+export const TableFooter: React.FC<Partial<TableFooterTypeMap> & CN> = ({ children, className, ...rest }) => {
+  const classes = useStyles();
+  return (
+    <MuiTableFooter className={cx(className, classes.tableBody)} {...rest}>
+      {children}
+    </MuiTableFooter>
+  );
+};
+
+export const TableFooterRow: React.FC<Partial<TableRowTypeMap> & CN> = ({ children, className, ...rest }) => {
+  const classes = useStyles();
+  return (
+    <MuiTableRow className={cx(className, classes.tableHeadRow)} {...rest}>
+      {children}
+    </MuiTableRow>
+  );
+};
+
+export const TableFooterCell: React.FC<Partial<TableCellProps> & CN> = ({ children, className, ...rest }) => {
+  const classes = useStyles();
+  return (
+    <MuiTableCell className={cx(className, classes.tableHeadCell)} {...rest}>
+      {children}
+    </MuiTableCell>
   );
 };
 

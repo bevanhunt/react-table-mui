@@ -1,6 +1,6 @@
 {
   "name": "react-table-mui-ts",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "Bevan Hunt",
   "description": "react-table mui table ready to plug into your project!",
   "license": "MIT",
@@ -27,18 +27,18 @@
     "node": "^16.15.0"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.8.2",
-    "@mui/material": "^5.8.2",
-    "@mui/styles": "^5.8.0",
-    "@mui/system": "^5.8.2",
     "classnames": "^2.3.1",
     "match-sorter": "^6.3.1",
     "prop-types": "^15.8.1",
     "react-table": "^7.7.0"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.2",
+    "@mui/material": "^5.8.2",
+    "@mui/styles": "^5.8.0",
+    "@mui/system": "^5.8.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
