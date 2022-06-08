@@ -1,7 +1,20 @@
 {
   "name": "react-table-mui-ts",
   "version": "0.0.1",
+  "description": "react-table mui table ready to plug into your project!",
   "license": "MIT",
+  "homepage": "https://github.com/bevanhunt/react-table-mui-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bevanhunt/react-table-mui-ts.git"
+  },
+  "keywords": [
+    "react-table",
+    "typescript",
+    "mui",
+    "table",
+    "data-grid"
+  ],
   "type": "module",
   "source": "index.ts",
   "module": "./dist/index.js",
