@@ -16,7 +16,6 @@ import React, {
 } from 'react';
 import { TableInstance } from 'react-table';
 
-import { TableMouseEventHandler } from '../../types/react-table-config';
 import { ColumnHidePage } from './ColumnHidePage';
 import { FilterPage } from './FilterPage';
 
@@ -46,7 +45,7 @@ export const useStyles = makeStyles(() => createStyles({
 type InstanceActionButton<T extends Record<string, unknown>> = {
   instance: TableInstance<T>
   icon?: JSX.Element
-  onClick: TableMouseEventHandler
+  onClick: any
   enabled?: (instance: TableInstance<T>) => boolean
   label: string
   variant?: 'right' | 'left'
@@ -141,9 +140,9 @@ export function SmallIconActionButton({
 
 type TableToolbarProps<T extends Record<string, unknown>> = {
   instance: TableInstance<T>
-  onAdd?: TableMouseEventHandler
-  onDelete?: TableMouseEventHandler
-  onEdit?: TableMouseEventHandler
+  onAdd?: any
+  onDelete?: any
+  onEdit?: any
 };
 
 export function TableToolbar<T extends Record<string, unknown>>({

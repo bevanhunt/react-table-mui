@@ -2,11 +2,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable max-len */
-import { TablePagination as _MuiTablePagination } from '@mui/material';
+import { TablePagination as _MuiTablePagination, Theme } from '@mui/material';
 import IconButton from '@mui/material/IconButton';
-import { Theme } from '@mui/system';
 import {
-  createStyles, makeStyles,
+  createStyles, makeStyles
 } from '@mui/styles';
 import FirstPageIcon from '@mui/icons-material/FirstPage';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
@@ -30,13 +29,6 @@ const interestingPropsEqual = (prevProps: any, nextProps: any) => prevProps.coun
 type T = typeof _MuiTablePagination;
 const MuiTablePagination: T = React.memo(_MuiTablePagination, interestingPropsEqual) as T;
 
-const useStyles = makeStyles((theme: Theme) => createStyles({
-  root: {
-    flexShrink: 0,
-    marginLeft: theme.spacing(2.5),
-  },
-}));
-
 interface TablePaginationActionsProps {
   count: number
   page: number
@@ -45,6 +37,12 @@ interface TablePaginationActionsProps {
 }
 
 function TablePaginationActions(props: TablePaginationActionsProps) {
+  const useStyles = makeStyles((theme: Theme) => createStyles({
+    root: {
+      flexShrink: 0,
+      marginLeft: theme.spacing(2.5),
+    },
+  }));
   const classes = useStyles();
   const {
     count, page, rowsPerPage, onPageChange,

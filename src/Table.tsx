@@ -38,11 +38,10 @@ import {
   useTable,
 } from 'react-table';
 
-import { camelToWords, useDebounce, useLocalStorage } from '../../utils';
+import { camelToWords, useDebounce, useLocalStorage } from '../utils';
 import { FilterChipBar } from './FilterChipBar';
 import { fuzzyTextFilter, numericTextFilter } from './filters';
 import { ResizeHandle } from './ResizeHandle';
-import { TableDebug } from './TableDebug';
 import { TablePagination } from './TablePagination';
 import {
   HeaderCheckbox,
@@ -329,7 +328,6 @@ export function Table<T extends Record<string, unknown>>(props: PropsWithChildre
         </TableBody>
       </TableTable>
       <TablePagination<T> instance={instance} />
-      <TableDebug enabled={false} instance={instance} />
     </>
   );
 }

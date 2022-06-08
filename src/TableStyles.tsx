@@ -3,9 +3,9 @@
 /* eslint-disable react/function-component-definition */
 /* eslint-disable react/require-default-props */
 /* eslint-disable max-len */
-import { Theme } from '@mui/system';
+import { createTheme } from '@mui/system';
 import {
-  Checkbox,
+  Checkbox, Theme,
 } from '@mui/material';
 import { createStyles, makeStyles, styled } from '@mui/styles';
 import MuiTableTable from '@mui/material/Table';
@@ -141,6 +141,8 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
 const areEqual = (prevProps: any, nextProps: any) => prevProps.checked === nextProps.checked && prevProps.indeterminate === nextProps.indeterminate;
 
 type CN = { className?: string; style?: CSSProperties, children?: React.ReactNode };
+
+const theme = createTheme();
 
 export const TableTable: React.FC<Partial<TableTypeMap> & CN> = ({ children, className, ...rest }) => {
   const classes = useStyles();
