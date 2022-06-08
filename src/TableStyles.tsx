@@ -29,8 +29,8 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
   },
   tableHead: {},
   tableHeadRow: {
-    backgroundColor: theme.palette.background.paper,
-    color: theme.palette.text.primary,
+    // backgroundColor: theme.palette.background.paper,
+    // color: theme.palette.text.primary,
     borderBottom: '1px solid rgba(224, 224, 224, 1)',
     '&:hover $resizeHandle': {
       opacity: 1,
@@ -41,7 +41,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     fontSize: '0.875rem',
     textAlign: 'left',
     verticalAlign: 'inherit',
-    color: theme.palette.text.primary,
+    // color: theme.palette.text.primary,
     fontWeight: 500,
     lineHeight: '1.5rem',
     borderRight: '1px solid rgba(224, 224, 224, 1)',
@@ -79,7 +79,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     fontWeight: 300,
     lineHeight: 1.3,
     verticalAlign: 'inherit',
-    color: theme.palette.text.primary,
+    // color: theme.palette.text.primary,
     borderRight: '1px solid rgba(224, 224, 224, 1)',
     '&:last-child': {
       borderRight: 'none',
@@ -90,8 +90,8 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     cursor: 'col-resize',
     zIndex: 100,
     opacity: 0,
-    borderLeft: `1px solid ${theme.palette.primary.light}`,
-    borderRight: `1px solid ${theme.palette.primary.light}`,
+    // borderLeft: `1px solid ${theme.palette.primary.light}`,
+    // borderRight: `1px solid ${theme.palette.primary.light}`,
     height: '50%',
     top: '25%',
     transition: 'all linear 100ms',
@@ -100,7 +100,7 @@ export const useStyles = makeStyles((theme: Theme) => createStyles({
     '&.handleActive': {
       opacity: 1,
       border: 'none',
-      backgroundColor: theme.palette.primary.light,
+      // backgroundColor: theme.palette.primary.light,
       height: 'calc(100% - 4px)',
       top: '2px',
       right: -1,

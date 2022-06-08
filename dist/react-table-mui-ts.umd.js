@@ -1,2 +1,1289 @@
-!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("@mui/material"),require("@mui/icons-material/KeyboardArrowRight"),require("@mui/icons-material/KeyboardArrowUp"),require("classnames"),require("react"),require("react-table"),require("@mui/styles"),require("match-sorter"),require("@mui/system"),require("@mui/material/Table"),require("@mui/material/TableBody"),require("@mui/material/TableCell"),require("@mui/material/TableHead"),require("@mui/material/TableRow"),require("@mui/material/IconButton"),require("@mui/icons-material/FirstPage"),require("@mui/icons-material/KeyboardArrowLeft"),require("@mui/icons-material/LastPage"),require("@mui/icons-material/Add"),require("@mui/icons-material/CreateOutlined"),require("@mui/icons-material/DeleteOutline"),require("@mui/icons-material/FilterList"),require("@mui/icons-material/ViewColumn")):"function"==typeof define&&define.amd?define(["exports","@mui/material","@mui/icons-material/KeyboardArrowRight","@mui/icons-material/KeyboardArrowUp","classnames","react","react-table","@mui/styles","match-sorter","@mui/system","@mui/material/Table","@mui/material/TableBody","@mui/material/TableCell","@mui/material/TableHead","@mui/material/TableRow","@mui/material/IconButton","@mui/icons-material/FirstPage","@mui/icons-material/KeyboardArrowLeft","@mui/icons-material/LastPage","@mui/icons-material/Add","@mui/icons-material/CreateOutlined","@mui/icons-material/DeleteOutline","@mui/icons-material/FilterList","@mui/icons-material/ViewColumn"],t):t((e||self).reactTableMuiTs={},e.material,e.KeyboardArrowRight,e.KeyboardArrowUp,e.classnames,e.react,e.reactTable,e.styles,e.matchSorter,e.system,e.MuiTableTable,e.MuiTableBody,e.MuiTableCell,e.MuiTableHead,e.MuiTableRow,e.IconButton,e.FirstPageIcon,e.KeyboardArrowLeft,e.LastPageIcon,e.AddIcon,e.CreateIcon,e.DeleteIcon,e.FilterListIcon,e.ViewColumnsIcon)}(this,function(e,t,a,r,n,i,l,o,s,c,u,d,m,p,f,g,b,v,y,C,x,w,k,T){function S(e){return e&&"object"==typeof e&&"default"in e?e:{default:e}}var P=/*#__PURE__*/S(a),N=/*#__PURE__*/S(r),R=/*#__PURE__*/S(n),A=/*#__PURE__*/S(i),I=/*#__PURE__*/S(u),F=/*#__PURE__*/S(d),B=/*#__PURE__*/S(m),z=/*#__PURE__*/S(p),L=/*#__PURE__*/S(f),O=/*#__PURE__*/S(g),H=/*#__PURE__*/S(b),q=/*#__PURE__*/S(v),D=/*#__PURE__*/S(y),E=/*#__PURE__*/S(C),G=/*#__PURE__*/S(x),j=/*#__PURE__*/S(w),M=/*#__PURE__*/S(k),W=/*#__PURE__*/S(T);function K(){return K=Object.assign?Object.assign.bind():function(e){for(var t=1;t<arguments.length;t++){var a=arguments[t];for(var r in a)Object.prototype.hasOwnProperty.call(a,r)&&(e[r]=a[r])}return e},K.apply(this,arguments)}function V(e,t){if(null==e)return{};var a,r,n={},i=Object.keys(e);for(r=0;r<i.length;r++)t.indexOf(a=i[r])>=0||(n[a]=e[a]);return n}var U=o.makeStyles(o.createStyles({filtersActiveLabel:{color:"#998",fontSize:"14px",paddingRight:10},chipZone:{padding:"18px 0 5px 10px",width:"100%"},chipLabel:{fontWeight:500,marginRight:5},filterChip:{marginRight:4,color:"#222"}})),_=function(e,t){if("between"===e.filter){var a=t[0],r=t[1];return a?r?a+"-"+r:">="+a:"<="+r}return t};function J(e){var a=e.instance,r=U({}),n=a.allColumns,l=a.setFilter,o=a.state.filters,s=i.useCallback(function(e){l(e,void 0)},[l]);return Object.keys(o).length>0?h("div",{className:r.chipZone},h("span",{className:r.filtersActiveLabel},"Active filters:"),o&&n.map(function(e){var a=o.find(function(t){return t.id===e.id}),n=a&&a.value;return n&&h(t.Chip,{className:r.filterChip,key:e.id,label:h(Fragment,null,h("span",{className:r.chipLabel},e.render("Header"),":"," "),_(e,n)),onDelete:function(){return s(e.id)},variant:"outlined"})})):null}function Z(e,t,a){return s.matchSorter(e,a,{keys:[function(e){return e.values[t[0]]}]})}Z.autoRemove=function(e){return!e};var $=/([=<>!]*)\s*((?:[0-9].?[0-9]*)+)/;function Q(e,t,a){var r=function(e){var t=function(t){return t==e},a=$.exec(e);if(!a)return t;switch(a[1]){case">":return function(e){return parseFloat(e)>parseFloat(a[2])};case"<":return function(e){return parseFloat(e)<parseFloat(a[2])};case"<=":return function(e){return parseFloat(e)<=parseFloat(a[2])};case">=":return function(e){return parseFloat(e)>=parseFloat(a[2])};case"=":return function(e){return parseFloat(e)===parseFloat(a[2])};case"!":return function(e){return parseFloat(e)!==parseFloat(a[2])}}return t}(a);return e.filter(function(e){return r(e.values[t[0]])})}Q.autoRemove=function(e){return!e};var X=["children","className"],Y=["children","className"],ee=["children","className"],te=["children","className"],ae=["children","className"],re=["children","className"],ne=["children","className"],ie=["children","className"],le=o.makeStyles(function(e){return o.createStyles({tableTable:{borderSpacing:0,border:"1px solid rgba(224, 224, 224, 1)",width:"100%"},tableHead:{},tableHeadRow:{backgroundColor:e.palette.background.paper,color:e.palette.text.primary,borderBottom:"1px solid rgba(224, 224, 224, 1)","&:hover $resizeHandle":{opacity:1}},tableHeadCell:{padding:"16px 1px 16px 16px",fontSize:"0.875rem",textAlign:"left",verticalAlign:"inherit",color:e.palette.text.primary,fontWeight:500,lineHeight:"1.5rem",borderRight:"1px solid rgba(224, 224, 224, 1)","&:last-child":{borderRight:"none"}},tableBody:{},tableRow:{color:"inherit",outline:0,verticalAlign:"middle","&:hover":{backgroundColor:"rgba(0, 0, 0, 0.07)"},borderBottom:"1px solid rgba(224, 224, 224, 1)","&:last-child":{borderBottom:"none"},"&.rowSelected":{backgroundColor:"rgba(0, 0, 0, 0.04)","&:hover":{backgroundColor:"rgba(0, 0, 0, 0.07)"}},"&.clickable":{cursor:"pointer"}},tableLabel:{},tableCell:{padding:"8px 16px",fontSize:"0.875rem",textAlign:"left",fontWeight:300,lineHeight:1.3,verticalAlign:"inherit",color:e.palette.text.primary,borderRight:"1px solid rgba(224, 224, 224, 1)","&:last-child":{borderRight:"none"}},resizeHandle:{position:"absolute",cursor:"col-resize",zIndex:100,opacity:0,borderLeft:"1px solid "+e.palette.primary.light,borderRight:"1px solid "+e.palette.primary.light,height:"50%",top:"25%",transition:"all linear 100ms",right:-2,width:3,"&.handleActive":{opacity:1,border:"none",backgroundColor:e.palette.primary.light,height:"calc(100% - 4px)",top:"2px",right:-1,width:1}},tableSortLabel:{"& svg":{width:16,height:16,marginTop:0,marginLeft:2}},headerIcon:{"& svg":{width:16,height:16,marginTop:4,marginRight:0}},iconDirectionAsc:{transform:"rotate(90deg)"},iconDirectionDesc:{transform:"rotate(180deg)"},cellIcon:{"& svg":{width:16,height:16,marginTop:3}}})}),oe=function(e,t){return e.checked===t.checked&&e.indeterminate===t.indeterminate};c.createTheme();var se=function(e){var t=e.children,a=e.className,r=V(e,X),n=le();return h(I.default,K({className:R.default(a,n.tableTable)},r),t)},ce=function(e){var t=e.children,a=e.className,r=V(e,Y),n=le();return h(F.default,K({className:R.default(a,n.tableBody)},r),t)},ue=function(e){var t=e.children,a=e.className,r=V(e,ee),n=le();return h(z.default,K({className:R.default(a,n.tableHead)},r),t)},de=function(e){var t=e.children,a=e.className,r=V(e,te),n=le();return h(L.default,K({className:R.default(a,n.tableHeadRow)},r),t)},he=function(e){var t=e.children,a=e.className,r=V(e,ae),n=le();return h(B.default,K({className:R.default(a,n.tableHeadCell)},r),t)},me=function(e){var t=e.children,a=e.className,r=V(e,re),n=le();return h(L.default,K({className:R.default(a,n.tableRow)},r),t)},pe=function(e){var t=e.children,a=e.className,r=V(e,ne),n=le();return h(B.default,K({className:R.default(a,n.tableCell)},r),t)},fe=function(e){var t=e.children,a=e.className,r=V(e,ie),n=le();return h("div",K({className:R.default(a,n.tableLabel)},r),t)},ge=A.default.memo(o.styled(t.Checkbox)({fontSize:"1rem",margin:"-8px 0 -8px -15px",padding:"8px 9px","& svg":{width:"24px",height:"24px"},"&:hover":{backgroundColor:"transparent"}}),oe),be=A.default.memo(o.styled(t.Checkbox)({fontSize:"14px",margin:"-9px 0 -8px -15px",padding:"5px 9px","&:hover":{backgroundColor:"transparent"},"& svg":{width:24,height:24}}),oe);function ve(e){var t,a=e.column,r=le();return h("div",K({},a.getResizerProps(),{style:{cursor:"col-resize"},className:R.default((t={},t[r.resizeHandle]=!0,t.handleActive=a.isResizing,t))}))}var ye=[10,25,50],Ce=A.default.memo(t.TablePagination,function(e,t){return e.count===t.count&&e.rowsPerPage===t.rowsPerPage&&e.page===t.page&&e.onChangePage===t.onChangePage&&e.onChangeRowsPerPage===t.onChangeRowsPerPage});function xe(e){var t=o.makeStyles(function(e){return o.createStyles({root:{flexShrink:0,marginLeft:e.spacing(2.5)}})})(),a=e.count,r=e.page,n=e.rowsPerPage,i=e.onPageChange;return h("div",{className:t.root},h(O.default,{onClick:function(e){i(e,0)},disabled:0===r,"aria-label":"first page"},h(H.default,null)),h(O.default,{onClick:function(e){i(e,r-1)},disabled:0===r,"aria-label":"previous page"},h(q.default,null)),h(O.default,{onClick:function(e){i(e,r+1)},disabled:r>=Math.ceil(a/n)-1,"aria-label":"next page"},h(P.default,null)),h(O.default,{onClick:function(e){i(e,Math.max(0,Math.ceil(a/n)-1))},disabled:r>=Math.ceil(a/n)-1,"aria-label":"last page"},h(D.default,null)))}function we(e){var t=e.instance,a=t.state,r=a.pageIndex,n=a.pageSize,l=a.rowCount,o=void 0===l?t.rows.length:l,s=t.gotoPage,c=t.nextPage,u=t.previousPage,d=t.setPageSize,m=i.useCallback(function(e,t){t===r+1?c():t===r-1?u():s(t)},[s,c,r,u]),p=i.useCallback(function(e){d(Number(e.target.value))},[d]);return o?h(Ce,{sx:{".MuiTablePagination-selectLabel":{paddingTop:"12px"},".MuiTablePagination-displayedRows":{paddingTop:"15px"}},rowsPerPageOptions:ye,component:"div",count:o,rowsPerPage:n,page:r,onPageChange:m,onRowsPerPageChange:p,ActionsComponent:xe}):null}var ke=o.makeStyles(o.createStyles({columnsPopOver:{padding:24},popoverTitle:{fontWeight:500,padding:"0 24px 24px 0",textTransform:"uppercase"},grid:{display:"grid",gridTemplateColumns:"repeat(2, 198px)","@media (max-width: 600px)":{gridTemplateColumns:"repeat(1, 160px)"},gridColumnGap:6,gridRowGap:6}}));function Te(e){var a=e.instance,r=e.anchorEl,n=e.onClose,i=e.show,l=ke({}),o=a.toggleHideColumn,s=a.allColumns.filter(function(e){return!("_selector"===e.id)}),c=s.reduce(function(e,t){return e+(t.isVisible?0:1)},0)+1>=s.length;return s.length>1?h("div",null,h(t.Popover,{anchorEl:r,className:l.columnsPopOver,id:"popover-column-hide",onClose:n,open:i,anchorOrigin:{vertical:"bottom",horizontal:"right"},transformOrigin:{vertical:"top",horizontal:"right"}},h("div",{className:l.columnsPopOver},h(t.Typography,{className:l.popoverTitle},"Visible Columns"),h("div",{className:l.grid},s.map(function(e){return h(t.FormControlLabel,{key:e.id,control:h(t.Checkbox,{value:""+e.id,disabled:e.isVisible&&c}),label:e.render("Header"),checked:e.isVisible,onChange:function(){return o(e.id,e.isVisible)}})}))))):null}var Se=o.makeStyles(o.createStyles({columnsPopOver:{padding:24},filtersResetButton:{position:"absolute",top:18,right:21},popoverTitle:{fontWeight:500,padding:"0 24px 24px 0",textTransform:"uppercase"},grid:{display:"grid",gridTemplateColumns:"repeat(2, 218px)","@media (max-width: 600px)":{gridTemplateColumns:"repeat(1, 180px)"},gridColumnGap:24,gridRowGap:24},cell:{width:"100%",display:"inline-flex",flexDirection:"column"},hidden:{display:"none"}}));function Pe(e){var a=e.instance,r=e.anchorEl,n=e.onClose,l=e.show,o=Se({}),s=a.allColumns,c=a.setAllFilters,u=i.useCallback(function(e){e.preventDefault(),n()},[n]),d=i.useCallback(function(){c([])},[c]);return h("div",null,h(t.Popover,{anchorEl:r,id:"popover-filters",onClose:n,open:l,anchorOrigin:{vertical:"bottom",horizontal:"right"},transformOrigin:{vertical:"top",horizontal:"right"}},h("div",{className:o.columnsPopOver},h(t.Typography,{className:o.popoverTitle},"Filters"),h("form",{onSubmit:u},h(t.Button,{className:o.filtersResetButton,color:"primary",onClick:d},"Reset"),h("div",{className:o.grid},s.filter(function(e){return e.canFilter}).map(function(e){return h("div",{key:e.id,className:o.cell},e.render("Filter"))})),h(t.Button,{className:o.hidden,type:"submit"}," ")))))}var Ne=o.makeStyles(function(){return o.createStyles({toolbar:{display:"flex",justifyContent:"space-between"},leftButtons:{},rightButtons:{},leftIcons:{"&:first-of-type":{marginLeft:-12}},rightIcons:{padding:12,marginTop:"-6px",width:48,height:48,"&:last-of-type":{marginRight:-12}}})});function Re(e){var a,r=e.instance,n=e.icon,i=e.onClick,l=e.label,o=e.enabled,s=void 0===o?function(){return!0}:o,c=e.variant,u=Ne({});return h(t.Tooltip,{title:l,"aria-label":l},h("span",null,h(t.IconButton,{className:R.default((a={},a[u.rightIcons]="right"===c,a[u.leftIcons]="left"===c,a)),onClick:i(r),disabled:!s(r)},n)))}function Ae(e){var a,r=e.icon,n=e.onClick,i=e.label,l=e.enabled,o=void 0===l||l,s=e.variant,c=Ne({});return h(t.Tooltip,{title:i,"aria-label":i},h("span",null,h(t.IconButton,{className:R.default((a={},a[c.rightIcons]="right"===s,a[c.leftIcons]="left"===s,a)),onClick:n,disabled:!o},r)))}function Ie(e){var a=e.instance,r=e.onAdd,n=e.onDelete,l=e.onEdit,o=a.columns,s=Ne(),c=i.useState(void 0),u=c[0],d=c[1],m=i.useState(!1),p=m[0],f=m[1],g=i.useState(!1),b=g[0],v=g[1],y=o.filter(function(e){return!("_selector"===e.id)}),C=i.useCallback(function(e){d(e.currentTarget),f(!0)},[d,f]),x=i.useCallback(function(e){d(e.currentTarget),v(!0)},[d,v]),w=i.useCallback(function(){f(!1),v(!1),d(void 0)},[]);return h(t.Toolbar,{className:s.toolbar},h("div",{className:s.leftButtons},r&&h(Re,{instance:a,icon:h(E.default,null),onClick:r,label:"Add",enabled:function(e){var t=e.state;return!t.selectedRowIds||0===Object.keys(t.selectedRowIds).length},variant:"left"}),l&&h(Re,{instance:a,icon:h(G.default,null),onClick:l,label:"Edit",enabled:function(e){var t=e.state;return t.selectedRowIds&&1===Object.keys(t.selectedRowIds).length},variant:"left"}),n&&h(Re,{instance:a,icon:h(j.default,null),onClick:n,label:"Delete",enabled:function(e){var t=e.state;return t.selectedRowIds&&Object.keys(t.selectedRowIds).length>0},variant:"left"})),h("div",{className:s.rightButtons},h(Te,{instance:a,onClose:w,show:p,anchorEl:u}),h(Pe,{instance:a,onClose:w,show:b,anchorEl:u}),y.length>1&&h(Ae,{icon:h(W.default,null),onClick:C,label:"Show / hide columns",variant:"right"}),h(Ae,{icon:h(M.default,null),onClick:x,label:"Filter by columns",variant:"right"})))}var Fe=o.makeStyles({truncated:{textOverflow:"ellipsis",overflow:"hidden",whiteSpace:"nowrap"}}),Be=function(e){var a=e.text,r=e.tooltip,n=void 0===r?a:r,i=e.align,l=Fe({});return h(t.Tooltip,{title:n,className:l.truncated,style:{textAlign:i}},h("span",null,a))},ze=["role"],Le=["key","title","role"],Oe=["key","role"],He=["title"],qe=["title"],De=["key","role"],Ee=["key","role"],Ge=function e(t){return t[0].columns?e(t[0].columns):t[0]},je=function(e,t,a){return void 0===a&&(a="left"),[e,{style:{justifyContent:"right"===a?"flex-end":"flex-start",alignItems:"flex-start",display:"flex"}}]},Me=function(e,t){var a=t.column;return je(e,0,a&&a.align)},We=function(e,t){var a=t.cell;return je(e,0,a.column&&a.column.align)},Ke={Filter:function(e){var a=e.columns,r=e.column,n=r.id,l=r.filterValue,o=r.setFilter,s=r.render,c=A.default.useState(l||""),u=c[0],d=c[1];i.useEffect(function(){d(l||"")},[l]);var m=Ge(a)===r;return h(t.TextField,{name:n,label:s("Header"),InputLabelProps:{htmlFor:n},value:u,autoFocus:m,variant:"standard",onChange:function(e){d(e.target.value)},onBlur:function(e){o(e.target.value||void 0)}})},Cell:function(e){var t=e.column.align;return h(Be,{text:e.cell.value,align:void 0===t?"left":t})},Header:function(e){var t=e.column;return h(Fragment,null,t.id.startsWith("_")?null:function(e){for(var t,a="",r=0,n=!0,i=!0;r<e.length;)t=e.charCodeAt(r),0===r?a+=e[r].toUpperCase():!i&&t>=65&&t<=90||!n&&t>=48&&t<=57?(a+=" ",a+=e[r].toUpperCase()):a+=e[r].toLowerCase(),n=t>=48&&t<=57,i=t>=65&&t<=90,r++;return a}(t.id))},minWidth:30,width:150,maxWidth:200},Ve=[l.useColumnOrder,l.useFilters,l.useGroupBy,l.useSortBy,l.useExpanded,l.useFlexLayout,l.usePagination,l.useResizeColumns,l.useRowSelect,function(e){e.allColumns.push(function(e){return[{id:"_selector",disableResizing:!0,disableGroupBy:!0,minWidth:45,width:45,maxWidth:45,Aggregated:void 0,Header:function(e){return h(ge,(0,e.getToggleAllRowsSelectedProps)())},Cell:function(e){return h(be,e.row.getToggleRowSelectedProps())}}].concat(e)}),e.useInstanceBeforeDimensions.push(function(e){e.headerGroups[0].headers[0].canResize=!1})}],Ue={fuzzyText:Z,numeric:Q};e.Table=function(e){var a,r,n,o,s=e.name,c=e.columns,u=e.onAdd,d=e.onDelete,m=e.onEdit,p=e.onClick,f=le(),g=(a="tableState:"+s,r={},n=i.useState(function(){if("undefined"==typeof window)return r;try{var e=window.localStorage.getItem(a);return e?JSON.parse(e):r}catch(e){return console.log(e),r}}),o=n[1],[n[0],i.useCallback(function(e){try{o(e),window.localStorage.setItem(a,JSON.stringify(e))}catch(e){console.log(e)}},[a])])[1],b=l.useTable.apply(void 0,[K({},e,{columns:c,filterTypes:Ue,defaultColumn:Ke,initialState:{hiddenColumns:c.filter(function(e){return!1===e.show}).map(function(e){return e.id||e.accessor})}})].concat(Ve)),v=b.getTableProps,y=b.headerGroups,C=b.getTableBodyProps,x=b.page,w=b.prepareRow,k=function(e,t){var a=i.useState(e),r=a[0],n=a[1];return i.useEffect(function(){var t=setTimeout(function(){n(e)},500);return function(){clearTimeout(t)}},[e,500]),r}(b.state);i.useEffect(function(){g({sortBy:k.sortBy,filters:k.filters,pageSize:k.pageSize,columnResizing:k.columnResizing,hiddenColumns:k.hiddenColumns})},[g,k]);var T=function(e){return function(){p&&!e.column.isGrouped&&!e.row.isGrouped&&"_selector"!==e.column.id&&p(e.row)}},S=V(v(),ze);return h(Fragment,null,h(Ie,{instance:b,onAdd:u,onDelete:d,onEdit:m}),h(J,{instance:b}),h(se,S,h(ue,null,y.map(function(e){var a=e.getHeaderGroupProps(),r=a.key,n=V(a,Le);return h(de,K({key:r},n),e.headers.map(function(e){var a={textAlign:e.align?e.align:"left "},r=e.getHeaderProps(Me),n=r.key,i=V(r,Oe),l=e.getGroupByToggleProps(),o=l.title,s=void 0===o?"":o,c=V(l,He),u=e.getSortByToggleProps(),d=u.title,m=void 0===d?"":d,p=V(u,qe);return h(he,K({key:n},i),e.canGroupBy&&h(t.Tooltip,{title:s},h(t.TableSortLabel,K({active:!0,direction:e.isGrouped?"desc":"asc",IconComponent:P.default},c,{className:f.headerIcon}))),e.canSort?h(t.Tooltip,{title:m},h(t.TableSortLabel,K({active:e.isSorted,direction:e.isSortedDesc?"desc":"asc"},p,{className:f.tableSortLabel,style:a}),e.render("Header"))):h(fe,{style:a},e.render("Header")),e.canResize&&h(ve,{column:e}))}))})),h(ce,C(),x.map(function(e){w(e);var a=e.getRowProps(),r=a.key,n=V(a,De);return h(me,K({key:r},n,{className:R.default({rowSelected:e.isSelected,clickable:p})}),e.cells.map(function(a){var r=a.getCellProps(We),n=r.key,i=V(r,Ee);return h(pe,K({key:n},i,{onClick:T(a)}),a.isGrouped?h(Fragment,null,h(t.TableSortLabel,K({classes:{iconDirectionAsc:f.iconDirectionAsc,iconDirectionDesc:f.iconDirectionDesc},active:!0,direction:e.isExpanded?"desc":"asc",IconComponent:N.default},e.getToggleRowExpandedProps(),{className:f.cellIcon}))," ",a.render("Cell",{editable:!1})," ","(",e.subRows.length,")"):a.isAggregated?a.render("Aggregated"):a.isPlaceholder?null:a.render("Cell"))}))}))),h(we,{instance:b}))}});
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('@mui/material'), require('@mui/icons-material/KeyboardArrowRight'), require('@mui/icons-material/KeyboardArrowUp'), require('classnames'), require('react'), require('react-table'), require('@mui/styles'), require('match-sorter'), require('@mui/system'), require('@mui/material/Table'), require('@mui/material/TableBody'), require('@mui/material/TableCell'), require('@mui/material/TableHead'), require('@mui/material/TableRow'), require('@mui/material/IconButton'), require('@mui/icons-material/FirstPage'), require('@mui/icons-material/KeyboardArrowLeft'), require('@mui/icons-material/LastPage'), require('@mui/icons-material/Add'), require('@mui/icons-material/CreateOutlined'), require('@mui/icons-material/DeleteOutline'), require('@mui/icons-material/FilterList'), require('@mui/icons-material/ViewColumn')) :
+  typeof define === 'function' && define.amd ? define(['exports', '@mui/material', '@mui/icons-material/KeyboardArrowRight', '@mui/icons-material/KeyboardArrowUp', 'classnames', 'react', 'react-table', '@mui/styles', 'match-sorter', '@mui/system', '@mui/material/Table', '@mui/material/TableBody', '@mui/material/TableCell', '@mui/material/TableHead', '@mui/material/TableRow', '@mui/material/IconButton', '@mui/icons-material/FirstPage', '@mui/icons-material/KeyboardArrowLeft', '@mui/icons-material/LastPage', '@mui/icons-material/Add', '@mui/icons-material/CreateOutlined', '@mui/icons-material/DeleteOutline', '@mui/icons-material/FilterList', '@mui/icons-material/ViewColumn'], factory) :
+  (global = global || self, factory(global.reactTableMuiTs = {}, global.material, global.KeyboardArrowRight, global.KeyboardArrowUp, global.classnames, global.React, global.reactTable, global.styles, global.matchSorter, global.system, global.MuiTableTable, global.MuiTableBody, global.MuiTableCell, global.MuiTableHead, global.MuiTableRow, global.IconButton, global.FirstPageIcon, global.KeyboardArrowLeft, global.LastPageIcon, global.AddIcon, global.CreateIcon, global.DeleteIcon, global.FilterListIcon, global.ViewColumnsIcon));
+})(this, (function (exports, material, KeyboardArrowRight, KeyboardArrowUp, cx, React, reactTable, styles, matchSorter, system, MuiTableTable, MuiTableBody, MuiTableCell, MuiTableHead, MuiTableRow, IconButton, FirstPageIcon, KeyboardArrowLeft, LastPageIcon, AddIcon, CreateIcon, DeleteIcon, FilterListIcon, ViewColumnsIcon) {
+  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+
+  var KeyboardArrowRight__default = /*#__PURE__*/_interopDefaultLegacy(KeyboardArrowRight);
+  var KeyboardArrowUp__default = /*#__PURE__*/_interopDefaultLegacy(KeyboardArrowUp);
+  var cx__default = /*#__PURE__*/_interopDefaultLegacy(cx);
+  var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+  var MuiTableTable__default = /*#__PURE__*/_interopDefaultLegacy(MuiTableTable);
+  var MuiTableBody__default = /*#__PURE__*/_interopDefaultLegacy(MuiTableBody);
+  var MuiTableCell__default = /*#__PURE__*/_interopDefaultLegacy(MuiTableCell);
+  var MuiTableHead__default = /*#__PURE__*/_interopDefaultLegacy(MuiTableHead);
+  var MuiTableRow__default = /*#__PURE__*/_interopDefaultLegacy(MuiTableRow);
+  var IconButton__default = /*#__PURE__*/_interopDefaultLegacy(IconButton);
+  var FirstPageIcon__default = /*#__PURE__*/_interopDefaultLegacy(FirstPageIcon);
+  var KeyboardArrowLeft__default = /*#__PURE__*/_interopDefaultLegacy(KeyboardArrowLeft);
+  var LastPageIcon__default = /*#__PURE__*/_interopDefaultLegacy(LastPageIcon);
+  var AddIcon__default = /*#__PURE__*/_interopDefaultLegacy(AddIcon);
+  var CreateIcon__default = /*#__PURE__*/_interopDefaultLegacy(CreateIcon);
+  var DeleteIcon__default = /*#__PURE__*/_interopDefaultLegacy(DeleteIcon);
+  var FilterListIcon__default = /*#__PURE__*/_interopDefaultLegacy(FilterListIcon);
+  var ViewColumnsIcon__default = /*#__PURE__*/_interopDefaultLegacy(ViewColumnsIcon);
+
+  function _extends() {
+    _extends = Object.assign ? Object.assign.bind() : function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+
+      return target;
+    };
+    return _extends.apply(this, arguments);
+  }
+
+  function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {};
+    var target = {};
+    var sourceKeys = Object.keys(source);
+    var key, i;
+
+    for (i = 0; i < sourceKeys.length; i++) {
+      key = sourceKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      target[key] = source[key];
+    }
+
+    return target;
+  }
+
+  // copied then trimmed from https://raw.githubusercontent.com/auth0/auth0.js/master/src/helper/object.js
+  function camelToWords(str) {
+    var newKey = '';
+    var index = 0;
+    var code;
+    var wasPrevNumber = true;
+    var wasPrevUppercase = true;
+
+    while (index < str.length) {
+      code = str.charCodeAt(index);
+
+      if (index === 0) {
+        newKey += str[index].toUpperCase();
+      } else if (!wasPrevUppercase && code >= 65 && code <= 90 || !wasPrevNumber && code >= 48 && code <= 57) {
+        newKey += ' ';
+        newKey += str[index].toUpperCase();
+      } else {
+        newKey += str[index].toLowerCase();
+      }
+
+      wasPrevNumber = code >= 48 && code <= 57;
+      wasPrevUppercase = code >= 65 && code <= 90;
+      index++;
+    }
+
+    return newKey;
+  }
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+
+  function useDebounce(value, delay) {
+    // State and setters for debounced value
+    var _useState = React.useState(value),
+        debouncedValue = _useState[0],
+        setDebouncedValue = _useState[1];
+
+    React.useEffect(function () {
+      // Set debouncedValue to value (passed in) after the specified delay
+      var handler = setTimeout(function () {
+        setDebouncedValue(value);
+      }, delay); // Return a cleanup function that will be called every time ...
+      // ... useEffect is re-called. useEffect will only be re-called ...
+      // ... if value changes (see the inputs array below).
+      // This is how we prevent debouncedValue from changing if value is ...
+      // ... changed within the delay period. Timeout gets cleared and restarted.
+      // To put it in context, if the user is typing within our app's ...
+      // ... search box, we don't want the debouncedValue to update until ...
+      // ... they've stopped typing for more than 500ms.
+
+      return function () {
+        clearTimeout(handler);
+      };
+    }, // Only re-call effect if value changes
+    // You could also add the "delay" var to inputs array if you ...
+    // ... need to be able to change that dynamically.
+    [value, delay]);
+    return debouncedValue;
+  }
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+
+  function useLocalStorage(key, initialValue) {
+    // State to store our value
+    // Pass initial state function to useState so logic is only executed once
+    var _useState = React.useState(function () {
+      if (typeof window === 'undefined') {
+        return initialValue;
+      }
+
+      try {
+        // Get from local storage by key
+        var item = window.localStorage.getItem(key); // Parse stored json or if none return initialValue
+
+        return item ? JSON.parse(item) : initialValue;
+      } catch (error) {
+        // If error also return initialValue
+        console.log(error);
+        return initialValue;
+      }
+    }),
+        storedValue = _useState[0],
+        setStoredValue = _useState[1]; // Return a wrapped version of useState's setter function that ...
+    // ... persists the new value to localStorage.
+
+
+    var setValue = React.useCallback(function (value) {
+      try {
+        // Save state
+        setStoredValue(value); // Save to local storage
+
+        window.localStorage.setItem(key, JSON.stringify(value));
+      } catch (error) {
+        // A more advanced implementation would handle the error case
+        console.log(error);
+      }
+    }, [key]);
+    return [storedValue, setValue];
+  }
+
+  /* eslint-disable import/prefer-default-export */
+  var useStyles$5 = styles.makeStyles(styles.createStyles({
+    filtersActiveLabel: {
+      color: '#998',
+      fontSize: '14px',
+      paddingRight: 10
+    },
+    chipZone: {
+      padding: '18px 0 5px 10px',
+      width: '100%'
+    },
+    chipLabel: {
+      fontWeight: 500,
+      marginRight: 5
+    },
+    filterChip: {
+      marginRight: 4,
+      color: '#222'
+    }
+  }));
+
+  var getFilterValue = function getFilterValue(column, filterValue) {
+    switch (column.filter) {
+      case 'between':
+        var min = filterValue[0];
+        var max = filterValue[1];
+        return min ? max ? min + "-" + max : ">=" + min : "<=" + max;
+    }
+
+    return filterValue;
+  };
+
+  function FilterChipBar(_ref) {
+    var instance = _ref.instance;
+    var classes = useStyles$5({});
+    var allColumns = instance.allColumns,
+        setFilter = instance.setFilter,
+        filters = instance.state.filters;
+    var handleDelete = React.useCallback(function (id) {
+      setFilter(id, undefined);
+    }, [setFilter]);
+    return Object.keys(filters).length > 0 ? /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.chipZone
+    }, /*#__PURE__*/React__default["default"].createElement("span", {
+      className: classes.filtersActiveLabel
+    }, "Active filters:"), filters && allColumns.map(function (column) {
+      var filter = filters.find(function (f) {
+        return f.id === column.id;
+      });
+      var value = filter && filter.value;
+      return value && /*#__PURE__*/React__default["default"].createElement(material.Chip, {
+        className: classes.filterChip,
+        key: column.id,
+        label: /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement("span", {
+          className: classes.chipLabel
+        }, column.render('Header'), ":", ' '), getFilterValue(column, value)),
+        onDelete: function onDelete() {
+          return handleDelete(column.id);
+        },
+        variant: "outlined"
+      });
+    })) : null;
+  }
+
+  /* eslint-disable @typescript-eslint/no-explicit-any */
+  function fuzzyTextFilter(rows, id, filterValue) {
+    return matchSorter.matchSorter(rows, filterValue, {
+      keys: [function (row) {
+        return row.values[id[0]];
+      }]
+    });
+  } // Let the table remove the filter if the string is empty
+
+  fuzzyTextFilter.autoRemove = function (val) {
+    return !val;
+  };
+
+  var regex = /([=<>!]*)\s*((?:[0-9].?[0-9]*)+)/;
+
+  function parseValue(filterValue) {
+    // eslint-disable-next-line eqeqeq
+    var defaultComparator = function defaultComparator(val) {
+      return val == filterValue;
+    };
+
+    var tokens = regex.exec(filterValue);
+
+    if (!tokens) {
+      return defaultComparator;
+    }
+
+    switch (tokens[1]) {
+      case '>':
+        return function (val) {
+          return parseFloat(val) > parseFloat(tokens[2]);
+        };
+
+      case '<':
+        return function (val) {
+          return parseFloat(val) < parseFloat(tokens[2]);
+        };
+
+      case '<=':
+        return function (val) {
+          return parseFloat(val) <= parseFloat(tokens[2]);
+        };
+
+      case '>=':
+        return function (val) {
+          return parseFloat(val) >= parseFloat(tokens[2]);
+        };
+
+      case '=':
+        return function (val) {
+          return parseFloat(val) === parseFloat(tokens[2]);
+        };
+
+      case '!':
+        return function (val) {
+          return parseFloat(val) !== parseFloat(tokens[2]);
+        };
+    }
+
+    return defaultComparator;
+  }
+
+  function numericTextFilter(rows, id, filterValue) {
+    var comparator = parseValue(filterValue);
+    return rows.filter(function (row) {
+      return comparator(row.values[id[0]]);
+    });
+  } // Let the table remove the filter if the string is empty
+
+  numericTextFilter.autoRemove = function (val) {
+    return !val;
+  };
+
+  var _excluded$1 = ["children", "className"],
+      _excluded2$1 = ["children", "className"],
+      _excluded3$1 = ["children", "className"],
+      _excluded4$1 = ["children", "className"],
+      _excluded5$1 = ["children", "className"],
+      _excluded6$1 = ["children", "className"],
+      _excluded7$1 = ["children", "className"],
+      _excluded8 = ["children", "className"];
+  var useStyles$4 = styles.makeStyles(function (theme) {
+    return styles.createStyles({
+      tableTable: {
+        borderSpacing: 0,
+        border: '1px solid rgba(224, 224, 224, 1)',
+        width: '100%'
+      },
+      tableHead: {},
+      tableHeadRow: {
+        // backgroundColor: theme.palette.background.paper,
+        // color: theme.palette.text.primary,
+        borderBottom: '1px solid rgba(224, 224, 224, 1)',
+        '&:hover $resizeHandle': {
+          opacity: 1
+        }
+      },
+      tableHeadCell: {
+        padding: '16px 1px 16px 16px',
+        fontSize: '0.875rem',
+        textAlign: 'left',
+        verticalAlign: 'inherit',
+        // color: theme.palette.text.primary,
+        fontWeight: 500,
+        lineHeight: '1.5rem',
+        borderRight: '1px solid rgba(224, 224, 224, 1)',
+        '&:last-child': {
+          borderRight: 'none'
+        }
+      },
+      tableBody: {},
+      tableRow: {
+        color: 'inherit',
+        outline: 0,
+        verticalAlign: 'middle',
+        '&:hover': {
+          backgroundColor: 'rgba(0, 0, 0, 0.07)'
+        },
+        borderBottom: '1px solid rgba(224, 224, 224, 1)',
+        '&:last-child': {
+          borderBottom: 'none'
+        },
+        '&.rowSelected': {
+          backgroundColor: 'rgba(0, 0, 0, 0.04)',
+          '&:hover': {
+            backgroundColor: 'rgba(0, 0, 0, 0.07)'
+          }
+        },
+        '&.clickable': {
+          cursor: 'pointer'
+        }
+      },
+      tableLabel: {},
+      tableCell: {
+        padding: '8px 16px',
+        fontSize: '0.875rem',
+        textAlign: 'left',
+        fontWeight: 300,
+        lineHeight: 1.3,
+        verticalAlign: 'inherit',
+        // color: theme.palette.text.primary,
+        borderRight: '1px solid rgba(224, 224, 224, 1)',
+        '&:last-child': {
+          borderRight: 'none'
+        }
+      },
+      resizeHandle: {
+        position: 'absolute',
+        cursor: 'col-resize',
+        zIndex: 100,
+        opacity: 0,
+        // borderLeft: `1px solid ${theme.palette.primary.light}`,
+        // borderRight: `1px solid ${theme.palette.primary.light}`,
+        height: '50%',
+        top: '25%',
+        transition: 'all linear 100ms',
+        right: -2,
+        width: 3,
+        '&.handleActive': {
+          opacity: 1,
+          border: 'none',
+          // backgroundColor: theme.palette.primary.light,
+          height: 'calc(100% - 4px)',
+          top: '2px',
+          right: -1,
+          width: 1
+        }
+      },
+      tableSortLabel: {
+        '& svg': {
+          width: 16,
+          height: 16,
+          marginTop: 0,
+          marginLeft: 2
+        }
+      },
+      headerIcon: {
+        '& svg': {
+          width: 16,
+          height: 16,
+          marginTop: 4,
+          marginRight: 0
+        }
+      },
+      iconDirectionAsc: {
+        transform: 'rotate(90deg)'
+      },
+      iconDirectionDesc: {
+        transform: 'rotate(180deg)'
+      },
+      cellIcon: {
+        '& svg': {
+          width: 16,
+          height: 16,
+          marginTop: 3
+        }
+      }
+    });
+  });
+
+  var areEqual = function areEqual(prevProps, nextProps) {
+    return prevProps.checked === nextProps.checked && prevProps.indeterminate === nextProps.indeterminate;
+  };
+
+  system.createTheme();
+  var TableTable = function TableTable(_ref) {
+    var children = _ref.children,
+        className = _ref.className,
+        rest = _objectWithoutPropertiesLoose(_ref, _excluded$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableTable__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableTable)
+    }, rest), children);
+  };
+  var TableBody = function TableBody(_ref2) {
+    var children = _ref2.children,
+        className = _ref2.className,
+        rest = _objectWithoutPropertiesLoose(_ref2, _excluded2$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableBody__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableBody)
+    }, rest), children);
+  };
+  var TableHead = function TableHead(_ref3) {
+    var children = _ref3.children,
+        className = _ref3.className,
+        rest = _objectWithoutPropertiesLoose(_ref3, _excluded3$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableHead__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableHead)
+    }, rest), children);
+  };
+  var TableHeadRow = function TableHeadRow(_ref4) {
+    var children = _ref4.children,
+        className = _ref4.className,
+        rest = _objectWithoutPropertiesLoose(_ref4, _excluded4$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableRow__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableHeadRow)
+    }, rest), children);
+  };
+  var TableHeadCell = function TableHeadCell(_ref5) {
+    var children = _ref5.children,
+        className = _ref5.className,
+        rest = _objectWithoutPropertiesLoose(_ref5, _excluded5$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableCell__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableHeadCell)
+    }, rest), children);
+  };
+  var TableRow = function TableRow(_ref6) {
+    var children = _ref6.children,
+        className = _ref6.className,
+        rest = _objectWithoutPropertiesLoose(_ref6, _excluded6$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableRow__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableRow)
+    }, rest), children);
+  };
+  var TableCell = function TableCell(_ref7) {
+    var children = _ref7.children,
+        className = _ref7.className,
+        rest = _objectWithoutPropertiesLoose(_ref7, _excluded7$1);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement(MuiTableCell__default["default"], _extends({
+      className: cx__default["default"](className, classes.tableCell)
+    }, rest), children);
+  };
+  var TableLabel = function TableLabel(_ref8) {
+    var children = _ref8.children,
+        className = _ref8.className,
+        rest = _objectWithoutPropertiesLoose(_ref8, _excluded8);
+
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement("div", _extends({
+      className: cx__default["default"](className, classes.tableLabel)
+    }, rest), children);
+  };
+  var HeaderCheckbox = React__default["default"].memo(styles.styled(material.Checkbox)({
+    fontSize: '1rem',
+    margin: '-8px 0 -8px -15px',
+    padding: '8px 9px',
+    '& svg': {
+      width: '24px',
+      height: '24px'
+    },
+    '&:hover': {
+      backgroundColor: 'transparent'
+    }
+  }), areEqual);
+  var RowCheckbox = React__default["default"].memo(styles.styled(material.Checkbox)({
+    fontSize: '14px',
+    margin: '-9px 0 -8px -15px',
+    padding: '5px 9px',
+    '&:hover': {
+      backgroundColor: 'transparent'
+    },
+    '& svg': {
+      width: 24,
+      height: 24
+    }
+  }), areEqual);
+
+  function ResizeHandle(_ref) {
+    var _cx;
+
+    var column = _ref.column;
+    var classes = useStyles$4();
+    return /*#__PURE__*/React__default["default"].createElement("div", _extends({}, column.getResizerProps(), {
+      style: {
+        cursor: 'col-resize'
+      } // override the useResizeColumns default
+      ,
+      className: cx__default["default"]((_cx = {}, _cx[classes.resizeHandle] = true, _cx.handleActive = column.isResizing, _cx))
+    }));
+  }
+
+  /* eslint-disable @typescript-eslint/no-shadow */
+  var rowsPerPageOptions = [10, 25, 50]; // avoid all of the redraws caused by the internal withStyles
+
+  var interestingPropsEqual = function interestingPropsEqual(prevProps, nextProps) {
+    return prevProps.count === nextProps.count && prevProps.rowsPerPage === nextProps.rowsPerPage && prevProps.page === nextProps.page && prevProps.onChangePage === nextProps.onChangePage && prevProps.onChangeRowsPerPage === nextProps.onChangeRowsPerPage;
+  };
+
+  var MuiTablePagination = React__default["default"].memo(material.TablePagination, interestingPropsEqual);
+
+  function TablePaginationActions(props) {
+    var useStyles = styles.makeStyles(function (theme) {
+      return styles.createStyles({
+        root: {
+          flexShrink: 0,
+          marginLeft: theme.spacing(2.5)
+        }
+      });
+    });
+    var classes = useStyles();
+    var count = props.count,
+        page = props.page,
+        rowsPerPage = props.rowsPerPage,
+        onPageChange = props.onPageChange;
+
+    var handleFirstPageButtonClick = function handleFirstPageButtonClick(event) {
+      onPageChange(event, 0);
+    };
+
+    var handleBackButtonClick = function handleBackButtonClick(event) {
+      onPageChange(event, page - 1);
+    };
+
+    var handleNextButtonClick = function handleNextButtonClick(event) {
+      onPageChange(event, page + 1);
+    };
+
+    var handleLastPageButtonClick = function handleLastPageButtonClick(event) {
+      onPageChange(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
+    };
+
+    return /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.root
+    }, /*#__PURE__*/React__default["default"].createElement(IconButton__default["default"], {
+      onClick: handleFirstPageButtonClick,
+      disabled: page === 0,
+      "aria-label": "first page"
+    }, /*#__PURE__*/React__default["default"].createElement(FirstPageIcon__default["default"], null)), /*#__PURE__*/React__default["default"].createElement(IconButton__default["default"], {
+      onClick: handleBackButtonClick,
+      disabled: page === 0,
+      "aria-label": "previous page"
+    }, /*#__PURE__*/React__default["default"].createElement(KeyboardArrowLeft__default["default"], null)), /*#__PURE__*/React__default["default"].createElement(IconButton__default["default"], {
+      onClick: handleNextButtonClick,
+      disabled: page >= Math.ceil(count / rowsPerPage) - 1,
+      "aria-label": "next page"
+    }, /*#__PURE__*/React__default["default"].createElement(KeyboardArrowRight__default["default"], null)), /*#__PURE__*/React__default["default"].createElement(IconButton__default["default"], {
+      onClick: handleLastPageButtonClick,
+      disabled: page >= Math.ceil(count / rowsPerPage) - 1,
+      "aria-label": "last page"
+    }, /*#__PURE__*/React__default["default"].createElement(LastPageIcon__default["default"], null)));
+  }
+
+  function TablePagination(_ref) {
+    var instance = _ref.instance;
+    var _instance$state = instance.state,
+        pageIndex = _instance$state.pageIndex,
+        pageSize = _instance$state.pageSize,
+        _instance$state$rowCo = _instance$state.rowCount,
+        rowCount = _instance$state$rowCo === void 0 ? instance.rows.length : _instance$state$rowCo,
+        gotoPage = instance.gotoPage,
+        nextPage = instance.nextPage,
+        previousPage = instance.previousPage,
+        setPageSize = instance.setPageSize;
+    var handleChangePage = React.useCallback(function (event, newPage) {
+      if (newPage === pageIndex + 1) {
+        nextPage();
+      } else if (newPage === pageIndex - 1) {
+        previousPage();
+      } else {
+        gotoPage(newPage);
+      }
+    }, [gotoPage, nextPage, pageIndex, previousPage]);
+    var onChangeRowsPerPage = React.useCallback(function (e) {
+      setPageSize(Number(e.target.value));
+    }, [setPageSize]);
+    return rowCount ? /*#__PURE__*/React__default["default"].createElement(MuiTablePagination, {
+      sx: {
+        '.MuiTablePagination-selectLabel': {
+          paddingTop: '12px'
+        },
+        '.MuiTablePagination-displayedRows': {
+          paddingTop: '15px'
+        }
+      },
+      rowsPerPageOptions: rowsPerPageOptions,
+      component: "div",
+      count: rowCount,
+      rowsPerPage: pageSize,
+      page: pageIndex,
+      onPageChange: handleChangePage,
+      onRowsPerPageChange: onChangeRowsPerPage,
+      ActionsComponent: TablePaginationActions
+    }) : null;
+  }
+
+  /* eslint-disable import/prefer-default-export */
+  var useStyles$3 = styles.makeStyles(styles.createStyles({
+    columnsPopOver: {
+      padding: 24
+    },
+    popoverTitle: {
+      fontWeight: 500,
+      padding: '0 24px 24px 0',
+      textTransform: 'uppercase'
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, 198px)',
+      '@media (max-width: 600px)': {
+        gridTemplateColumns: 'repeat(1, 160px)'
+      },
+      gridColumnGap: 6,
+      gridRowGap: 6
+    }
+  }));
+  var id = 'popover-column-hide';
+  function ColumnHidePage(_ref) {
+    var instance = _ref.instance,
+        anchorEl = _ref.anchorEl,
+        onClose = _ref.onClose,
+        show = _ref.show;
+    var classes = useStyles$3({});
+    var allColumns = instance.allColumns,
+        toggleHideColumn = instance.toggleHideColumn;
+    var hideableColumns = allColumns.filter(function (column) {
+      return !(column.id === '_selector');
+    });
+    var checkedCount = hideableColumns.reduce(function (acc, val) {
+      return acc + (val.isVisible ? 0 : 1);
+    }, 0);
+    var onlyOneOptionLeft = checkedCount + 1 >= hideableColumns.length;
+    return hideableColumns.length > 1 ? /*#__PURE__*/React__default["default"].createElement("div", null, /*#__PURE__*/React__default["default"].createElement(material.Popover, {
+      anchorEl: anchorEl,
+      className: classes.columnsPopOver,
+      id: id,
+      onClose: onClose,
+      open: show,
+      anchorOrigin: {
+        vertical: 'bottom',
+        horizontal: 'right'
+      },
+      transformOrigin: {
+        vertical: 'top',
+        horizontal: 'right'
+      }
+    }, /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.columnsPopOver
+    }, /*#__PURE__*/React__default["default"].createElement(material.Typography, {
+      className: classes.popoverTitle
+    }, "Visible Columns"), /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.grid
+    }, hideableColumns.map(function (column) {
+      return /*#__PURE__*/React__default["default"].createElement(material.FormControlLabel, {
+        key: column.id,
+        control: /*#__PURE__*/React__default["default"].createElement(material.Checkbox, {
+          value: "" + column.id,
+          disabled: column.isVisible && onlyOneOptionLeft
+        }),
+        label: column.render('Header'),
+        checked: column.isVisible,
+        onChange: function onChange() {
+          return toggleHideColumn(column.id, column.isVisible);
+        }
+      });
+    }))))) : null;
+  }
+
+  /* eslint-disable react/require-default-props */
+  var useStyles$2 = styles.makeStyles(styles.createStyles({
+    columnsPopOver: {
+      padding: 24
+    },
+    filtersResetButton: {
+      position: 'absolute',
+      top: 18,
+      right: 21
+    },
+    popoverTitle: {
+      fontWeight: 500,
+      padding: '0 24px 24px 0',
+      textTransform: 'uppercase'
+    },
+    grid: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(2, 218px)',
+      '@media (max-width: 600px)': {
+        gridTemplateColumns: 'repeat(1, 180px)'
+      },
+      gridColumnGap: 24,
+      gridRowGap: 24
+    },
+    cell: {
+      width: '100%',
+      display: 'inline-flex',
+      flexDirection: 'column'
+    },
+    hidden: {
+      display: 'none'
+    }
+  }));
+  function FilterPage(_ref) {
+    var instance = _ref.instance,
+        anchorEl = _ref.anchorEl,
+        onClose = _ref.onClose,
+        show = _ref.show;
+    var classes = useStyles$2({});
+    var allColumns = instance.allColumns,
+        setAllFilters = instance.setAllFilters;
+    var onSubmit = React.useCallback(function (e) {
+      e.preventDefault();
+      onClose();
+    }, [onClose]);
+    var resetFilters = React.useCallback(function () {
+      setAllFilters([]);
+    }, [setAllFilters]);
+    return /*#__PURE__*/React__default["default"].createElement("div", null, /*#__PURE__*/React__default["default"].createElement(material.Popover, {
+      anchorEl: anchorEl,
+      id: "popover-filters",
+      onClose: onClose,
+      open: show,
+      anchorOrigin: {
+        vertical: 'bottom',
+        horizontal: 'right'
+      },
+      transformOrigin: {
+        vertical: 'top',
+        horizontal: 'right'
+      }
+    }, /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.columnsPopOver
+    }, /*#__PURE__*/React__default["default"].createElement(material.Typography, {
+      className: classes.popoverTitle
+    }, "Filters"), /*#__PURE__*/React__default["default"].createElement("form", {
+      onSubmit: onSubmit
+    }, /*#__PURE__*/React__default["default"].createElement(material.Button, {
+      className: classes.filtersResetButton,
+      color: "primary",
+      onClick: resetFilters
+    }, "Reset"), /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.grid
+    }, allColumns.filter(function (it) {
+      return it.canFilter;
+    }).map(function (column) {
+      return /*#__PURE__*/React__default["default"].createElement("div", {
+        key: column.id,
+        className: classes.cell
+      }, column.render('Filter'));
+    })), /*#__PURE__*/React__default["default"].createElement(material.Button, {
+      className: classes.hidden,
+      type: "submit"
+    }, "\xA0")))));
+  }
+
+  /* eslint-disable react/no-unused-prop-types */
+  var useStyles$1 = styles.makeStyles(function () {
+    return styles.createStyles({
+      toolbar: {
+        display: 'flex',
+        justifyContent: 'space-between'
+      },
+      leftButtons: {},
+      rightButtons: {},
+      leftIcons: {
+        '&:first-of-type': {
+          marginLeft: -12
+        }
+      },
+      rightIcons: {
+        padding: 12,
+        marginTop: '-6px',
+        width: 48,
+        height: 48,
+        '&:last-of-type': {
+          marginRight: -12
+        }
+      }
+    });
+  });
+  function InstanceSmallIconActionButton(_ref3) {
+    var _classnames;
+
+    var instance = _ref3.instance,
+        icon = _ref3.icon,
+        onClick = _ref3.onClick,
+        label = _ref3.label,
+        _ref3$enabled = _ref3.enabled,
+        enabled = _ref3$enabled === void 0 ? function () {
+      return true;
+    } : _ref3$enabled,
+        variant = _ref3.variant;
+    var classes = useStyles$1({});
+    return /*#__PURE__*/React__default["default"].createElement(material.Tooltip, {
+      title: label,
+      "aria-label": label
+    }, /*#__PURE__*/React__default["default"].createElement("span", null, /*#__PURE__*/React__default["default"].createElement(material.IconButton, {
+      className: cx__default["default"]((_classnames = {}, _classnames[classes.rightIcons] = variant === 'right', _classnames[classes.leftIcons] = variant === 'left', _classnames)),
+      onClick: onClick(instance),
+      disabled: !enabled(instance)
+    }, icon)));
+  }
+  function SmallIconActionButton(_ref4) {
+    var _classnames2;
+
+    var icon = _ref4.icon,
+        onClick = _ref4.onClick,
+        label = _ref4.label,
+        _ref4$enabled = _ref4.enabled,
+        enabled = _ref4$enabled === void 0 ? true : _ref4$enabled,
+        variant = _ref4.variant;
+    var classes = useStyles$1({});
+    return /*#__PURE__*/React__default["default"].createElement(material.Tooltip, {
+      title: label,
+      "aria-label": label
+    }, /*#__PURE__*/React__default["default"].createElement("span", null, /*#__PURE__*/React__default["default"].createElement(material.IconButton, {
+      className: cx__default["default"]((_classnames2 = {}, _classnames2[classes.rightIcons] = variant === 'right', _classnames2[classes.leftIcons] = variant === 'left', _classnames2)),
+      onClick: onClick,
+      disabled: !enabled
+    }, icon)));
+  }
+  function TableToolbar(_ref5) {
+    var instance = _ref5.instance,
+        onAdd = _ref5.onAdd,
+        onDelete = _ref5.onDelete,
+        onEdit = _ref5.onEdit;
+    var columns = instance.columns;
+    var classes = useStyles$1();
+
+    var _useState = React.useState(undefined),
+        anchorEl = _useState[0],
+        setAnchorEl = _useState[1];
+
+    var _useState2 = React.useState(false),
+        columnsOpen = _useState2[0],
+        setColumnsOpen = _useState2[1];
+
+    var _useState3 = React.useState(false),
+        filterOpen = _useState3[0],
+        setFilterOpen = _useState3[1];
+
+    var hideableColumns = columns.filter(function (column) {
+      return !(column.id === '_selector');
+    });
+    var handleColumnsClick = React.useCallback(function (event) {
+      setAnchorEl(event.currentTarget);
+      setColumnsOpen(true);
+    }, [setAnchorEl, setColumnsOpen]);
+    var handleFilterClick = React.useCallback(function (event) {
+      setAnchorEl(event.currentTarget);
+      setFilterOpen(true);
+    }, [setAnchorEl, setFilterOpen]);
+    var handleClose = React.useCallback(function () {
+      setColumnsOpen(false);
+      setFilterOpen(false);
+      setAnchorEl(undefined);
+    }, []); // toolbar with add, edit, delete, filter/search column select.
+
+    return /*#__PURE__*/React__default["default"].createElement(material.Toolbar, {
+      className: classes.toolbar
+    }, /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.leftButtons
+    }, onAdd && /*#__PURE__*/React__default["default"].createElement(InstanceSmallIconActionButton, {
+      instance: instance,
+      icon: /*#__PURE__*/React__default["default"].createElement(AddIcon__default["default"], null),
+      onClick: onAdd,
+      label: "Add",
+      enabled: function enabled(_ref6) {
+        var state = _ref6.state;
+        return !state.selectedRowIds || Object.keys(state.selectedRowIds).length === 0;
+      },
+      variant: "left"
+    }), onEdit && /*#__PURE__*/React__default["default"].createElement(InstanceSmallIconActionButton, {
+      instance: instance,
+      icon: /*#__PURE__*/React__default["default"].createElement(CreateIcon__default["default"], null),
+      onClick: onEdit,
+      label: "Edit",
+      enabled: function enabled(_ref7) {
+        var state = _ref7.state;
+        return state.selectedRowIds && Object.keys(state.selectedRowIds).length === 1;
+      },
+      variant: "left"
+    }), onDelete && /*#__PURE__*/React__default["default"].createElement(InstanceSmallIconActionButton, {
+      instance: instance,
+      icon: /*#__PURE__*/React__default["default"].createElement(DeleteIcon__default["default"], null),
+      onClick: onDelete,
+      label: "Delete",
+      enabled: function enabled(_ref8) {
+        var state = _ref8.state;
+        return state.selectedRowIds && Object.keys(state.selectedRowIds).length > 0;
+      },
+      variant: "left"
+    })), /*#__PURE__*/React__default["default"].createElement("div", {
+      className: classes.rightButtons
+    }, /*#__PURE__*/React__default["default"].createElement(ColumnHidePage, {
+      instance: instance,
+      onClose: handleClose,
+      show: columnsOpen,
+      anchorEl: anchorEl
+    }), /*#__PURE__*/React__default["default"].createElement(FilterPage, {
+      instance: instance,
+      onClose: handleClose,
+      show: filterOpen,
+      anchorEl: anchorEl
+    }), hideableColumns.length > 1 && /*#__PURE__*/React__default["default"].createElement(SmallIconActionButton, {
+      icon: /*#__PURE__*/React__default["default"].createElement(ViewColumnsIcon__default["default"], null),
+      onClick: handleColumnsClick,
+      label: "Show / hide columns",
+      variant: "right"
+    }), /*#__PURE__*/React__default["default"].createElement(SmallIconActionButton, {
+      icon: /*#__PURE__*/React__default["default"].createElement(FilterListIcon__default["default"], null),
+      onClick: handleFilterClick,
+      label: "Filter by columns",
+      variant: "right"
+    })));
+  }
+
+  /* eslint-disable @typescript-eslint/no-use-before-define */
+  var useStyles = styles.makeStyles({
+    truncated: {
+      textOverflow: 'ellipsis',
+      overflow: 'hidden',
+      whiteSpace: 'nowrap'
+    }
+  });
+  var TooltipCellRenderer = function TooltipCellRenderer(_ref) {
+    var value = _ref.cell.value,
+        _ref$column$align = _ref.column.align,
+        align = _ref$column$align === void 0 ? 'left' : _ref$column$align;
+    return /*#__PURE__*/React__default["default"].createElement(TooltipCell, {
+      text: value,
+      align: align
+    });
+  };
+  var TooltipCell = function TooltipCell(_ref2) {
+    var text = _ref2.text,
+        _ref2$tooltip = _ref2.tooltip,
+        tooltip = _ref2$tooltip === void 0 ? text : _ref2$tooltip,
+        align = _ref2.align;
+    var classes = useStyles({});
+    return /*#__PURE__*/React__default["default"].createElement(material.Tooltip, {
+      title: tooltip,
+      className: classes.truncated,
+      style: {
+        textAlign: align
+      }
+    }, /*#__PURE__*/React__default["default"].createElement("span", null, text));
+  };
+
+  var _excluded = ["role"],
+      _excluded2 = ["key", "title", "role"],
+      _excluded3 = ["key", "role"],
+      _excluded4 = ["title"],
+      _excluded5 = ["title"],
+      _excluded6 = ["key", "role"],
+      _excluded7 = ["key", "role"];
+
+  var DefaultHeader = function DefaultHeader(_ref) {
+    var column = _ref.column;
+    return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, column.id.startsWith('_') ? null : camelToWords(column.id));
+  }; // yes this is recursive, but the depth never exceeds three so it seems safe enough
+
+
+  var findFirstColumn = function findFirstColumn(columns) {
+    return columns[0].columns ? findFirstColumn(columns[0].columns) : columns[0];
+  };
+
+  function DefaultColumnFilter(_ref2) {
+    var columns = _ref2.columns,
+        column = _ref2.column;
+    var id = column.id,
+        filterValue = column.filterValue,
+        setFilter = column.setFilter,
+        render = column.render;
+
+    var _React$useState = React__default["default"].useState(filterValue || ''),
+        value = _React$useState[0],
+        setValue = _React$useState[1];
+
+    var handleChange = function handleChange(event) {
+      setValue(event.target.value);
+    }; // ensure that reset loads the new value
+
+
+    React.useEffect(function () {
+      setValue(filterValue || '');
+    }, [filterValue]);
+    var isFirstColumn = findFirstColumn(columns) === column;
+    return /*#__PURE__*/React__default["default"].createElement(material.TextField, {
+      name: id,
+      label: render('Header'),
+      InputLabelProps: {
+        htmlFor: id
+      },
+      value: value,
+      autoFocus: isFirstColumn,
+      variant: "standard",
+      onChange: handleChange,
+      onBlur: function onBlur(e) {
+        setFilter(e.target.value || undefined);
+      }
+    });
+  }
+
+  var getStyles = function getStyles(props, disableResizing, align) {
+
+    if (align === void 0) {
+      align = 'left';
+    }
+
+    return [props, {
+      style: {
+        justifyContent: align === 'right' ? 'flex-end' : 'flex-start',
+        alignItems: 'flex-start',
+        display: 'flex'
+      }
+    }];
+  };
+
+  var selectionHook = function selectionHook(hooks) {
+    hooks.allColumns.push(function (columns) {
+      return [// Let's make a column for selection
+      {
+        id: '_selector',
+        disableResizing: true,
+        disableGroupBy: true,
+        minWidth: 45,
+        width: 45,
+        maxWidth: 45,
+        Aggregated: undefined,
+        // The header can use the table's getToggleAllRowsSelectedProps method
+        // to render a checkbox
+        Header: function Header(_ref3) {
+          var getToggleAllRowsSelectedProps = _ref3.getToggleAllRowsSelectedProps;
+          return /*#__PURE__*/React__default["default"].createElement(HeaderCheckbox, getToggleAllRowsSelectedProps());
+        },
+        // The cell can use the individual row's getToggleRowSelectedProps method
+        // to the render a checkbox
+        Cell: function Cell(_ref4) {
+          var row = _ref4.row;
+          return /*#__PURE__*/React__default["default"].createElement(RowCheckbox, row.getToggleRowSelectedProps());
+        }
+      }].concat(columns);
+    });
+    hooks.useInstanceBeforeDimensions.push(function (_ref5) {
+      var headerGroups = _ref5.headerGroups;
+      // fix the parent group of the selection button to not be resizable
+      var selectionGroupHeader = headerGroups[0].headers[0];
+      selectionGroupHeader.canResize = false;
+    });
+  };
+
+  var headerProps = function headerProps(props, _ref6) {
+    var column = _ref6.column;
+    return getStyles(props, column && column.disableResizing, column && column.align);
+  };
+
+  var cellProps = function cellProps(props, _ref7) {
+    var cell = _ref7.cell;
+    return getStyles(props, cell.column && cell.column.disableResizing, cell.column && cell.column.align);
+  };
+
+  var defaultColumn = {
+    Filter: DefaultColumnFilter,
+    Cell: TooltipCellRenderer,
+    Header: DefaultHeader,
+    // When using the useFlexLayout:
+    minWidth: 30,
+    width: 150,
+    maxWidth: 200 // maxWidth is only used as a limit for resizing
+
+  };
+  var hooks = [reactTable.useColumnOrder, reactTable.useFilters, reactTable.useGroupBy, reactTable.useSortBy, reactTable.useExpanded, reactTable.useFlexLayout, reactTable.usePagination, reactTable.useResizeColumns, reactTable.useRowSelect, selectionHook];
+  var filterTypes = {
+    fuzzyText: fuzzyTextFilter,
+    numeric: numericTextFilter
+  };
+  function Table(props) {
+    var name = props.name,
+        columns = props.columns,
+        onAdd = props.onAdd,
+        onDelete = props.onDelete,
+        onEdit = props.onEdit,
+        onClick = props.onClick;
+    var classes = useStyles$4();
+
+    var _useLocalStorage = useLocalStorage("tableState:" + name, {}),
+        setInitialState = _useLocalStorage[1];
+
+    var instance = reactTable.useTable.apply(void 0, [_extends({}, props, {
+      columns: columns,
+      filterTypes: filterTypes,
+      defaultColumn: defaultColumn,
+      initialState: {
+        hiddenColumns: columns.filter(function (col) {
+          return col.show === false;
+        }).map(function (col) {
+          return col.id || col.accessor;
+        })
+      }
+    })].concat(hooks));
+    var getTableProps = instance.getTableProps,
+        headerGroups = instance.headerGroups,
+        getTableBodyProps = instance.getTableBodyProps,
+        page = instance.page,
+        prepareRow = instance.prepareRow,
+        state = instance.state;
+    var debouncedState = useDebounce(state, 500);
+    React.useEffect(function () {
+      var sortBy = debouncedState.sortBy,
+          filters = debouncedState.filters,
+          pageSize = debouncedState.pageSize,
+          columnResizing = debouncedState.columnResizing,
+          hiddenColumns = debouncedState.hiddenColumns;
+      var val = {
+        sortBy: sortBy,
+        filters: filters,
+        pageSize: pageSize,
+        columnResizing: columnResizing,
+        hiddenColumns: hiddenColumns
+      };
+      setInitialState(val);
+    }, [setInitialState, debouncedState]);
+
+    var cellClickHandler = function cellClickHandler(cell) {
+      return function () {
+        onClick && !cell.column.isGrouped && !cell.row.isGrouped && cell.column.id !== '_selector' && onClick(cell.row);
+      };
+    };
+
+    var _getTableProps = getTableProps(),
+        tableProps = _objectWithoutPropertiesLoose(_getTableProps, _excluded);
+
+    return /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(TableToolbar, {
+      instance: instance,
+      onAdd: onAdd,
+      onDelete: onDelete,
+      onEdit: onEdit
+    }), /*#__PURE__*/React__default["default"].createElement(FilterChipBar, {
+      instance: instance
+    }), /*#__PURE__*/React__default["default"].createElement(TableTable, tableProps, /*#__PURE__*/React__default["default"].createElement(TableHead, null, headerGroups.map(function (headerGroup) {
+      var _headerGroup$getHeade = headerGroup.getHeaderGroupProps(),
+          headerGroupKey = _headerGroup$getHeade.key,
+          getHeaderGroupProps = _objectWithoutPropertiesLoose(_headerGroup$getHeade, _excluded2);
+
+      return /*#__PURE__*/React__default["default"].createElement(TableHeadRow, _extends({
+        key: headerGroupKey
+      }, getHeaderGroupProps), headerGroup.headers.map(function (column) {
+        var style = {
+          textAlign: column.align ? column.align : 'left '
+        };
+
+        var _column$getHeaderProp = column.getHeaderProps(headerProps),
+            headerKey = _column$getHeaderProp.key,
+            getHeaderProps = _objectWithoutPropertiesLoose(_column$getHeaderProp, _excluded3);
+
+        var _column$getGroupByTog = column.getGroupByToggleProps(),
+            _column$getGroupByTog2 = _column$getGroupByTog.title,
+            groupTitle = _column$getGroupByTog2 === void 0 ? '' : _column$getGroupByTog2,
+            columnGroupByProps = _objectWithoutPropertiesLoose(_column$getGroupByTog, _excluded4);
+
+        var _column$getSortByTogg = column.getSortByToggleProps(),
+            _column$getSortByTogg2 = _column$getSortByTogg.title,
+            sortTitle = _column$getSortByTogg2 === void 0 ? '' : _column$getSortByTogg2,
+            columnSortByProps = _objectWithoutPropertiesLoose(_column$getSortByTogg, _excluded5);
+
+        return /*#__PURE__*/React__default["default"].createElement(TableHeadCell, _extends({
+          key: headerKey
+        }, getHeaderProps), column.canGroupBy && /*#__PURE__*/React__default["default"].createElement(material.Tooltip, {
+          title: groupTitle
+        }, /*#__PURE__*/React__default["default"].createElement(material.TableSortLabel, _extends({
+          active: true,
+          direction: column.isGrouped ? 'desc' : 'asc',
+          IconComponent: KeyboardArrowRight__default["default"]
+        }, columnGroupByProps, {
+          className: classes.headerIcon
+        }))), column.canSort ? /*#__PURE__*/React__default["default"].createElement(material.Tooltip, {
+          title: sortTitle
+        }, /*#__PURE__*/React__default["default"].createElement(material.TableSortLabel, _extends({
+          active: column.isSorted,
+          direction: column.isSortedDesc ? 'desc' : 'asc'
+        }, columnSortByProps, {
+          className: classes.tableSortLabel,
+          style: style
+        }), column.render('Header'))) : /*#__PURE__*/React__default["default"].createElement(TableLabel, {
+          style: style
+        }, column.render('Header')), column.canResize && /*#__PURE__*/React__default["default"].createElement(ResizeHandle, {
+          column: column
+        }));
+      }));
+    })), /*#__PURE__*/React__default["default"].createElement(TableBody, getTableBodyProps(), page.map(function (row) {
+      prepareRow(row);
+
+      var _row$getRowProps = row.getRowProps(),
+          rowKey = _row$getRowProps.key,
+          getRowProps = _objectWithoutPropertiesLoose(_row$getRowProps, _excluded6);
+
+      return /*#__PURE__*/React__default["default"].createElement(TableRow, _extends({
+        key: rowKey
+      }, getRowProps, {
+        className: cx__default["default"]({
+          rowSelected: row.isSelected,
+          clickable: onClick
+        })
+      }), row.cells.map(function (cell) {
+        var _cell$getCellProps = cell.getCellProps(cellProps),
+            cellKey = _cell$getCellProps.key,
+            getCellProps = _objectWithoutPropertiesLoose(_cell$getCellProps, _excluded7);
+
+        return /*#__PURE__*/React__default["default"].createElement(TableCell, _extends({
+          key: cellKey
+        }, getCellProps, {
+          onClick: cellClickHandler(cell)
+        }), cell.isGrouped ? /*#__PURE__*/React__default["default"].createElement(React__default["default"].Fragment, null, /*#__PURE__*/React__default["default"].createElement(material.TableSortLabel, _extends({
+          classes: {
+            iconDirectionAsc: classes.iconDirectionAsc,
+            iconDirectionDesc: classes.iconDirectionDesc
+          },
+          active: true,
+          direction: row.isExpanded ? 'desc' : 'asc',
+          IconComponent: KeyboardArrowUp__default["default"]
+        }, row.getToggleRowExpandedProps(), {
+          className: classes.cellIcon
+        })), ' ', cell.render('Cell', {
+          editable: false
+        }), ' ', "(", row.subRows.length, ")") : cell.isAggregated ? cell.render('Aggregated') : cell.isPlaceholder ? null : cell.render('Cell'));
+      }));
+    }))), /*#__PURE__*/React__default["default"].createElement(TablePagination, {
+      instance: instance
+    }));
+  }
+
+  exports.Table = Table;
+
+}));
 //# sourceMappingURL=react-table-mui-ts.umd.js.map
