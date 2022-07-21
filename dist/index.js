@@ -66404,14 +66404,6 @@ function TablePagination({ instance  }) {
         setPageSize
     ]);
     return rowCount ? /*#__PURE__*/ React__default.createElement(MuiTablePagination, {
-        sx: {
-            '.MuiTablePagination-selectLabel': {
-                paddingTop: '12px'
-            },
-            '.MuiTablePagination-displayedRows': {
-                paddingTop: '15px'
-            }
-        },
         rowsPerPageOptions: rowsPerPageOptions,
         component: "div",
         count: rowCount,
