@@ -123,14 +123,6 @@ export function TablePagination<T extends Record<string, unknown>>({
 
   return rowCount ? (
     <MuiTablePagination
-      sx={{
-        '.MuiTablePagination-selectLabel': {
-          paddingTop: '12px',
-        },
-        '.MuiTablePagination-displayedRows': {
-          paddingTop: '15px',
-        },
-      }}
       rowsPerPageOptions={rowsPerPageOptions}
       component="div"
       count={rowCount}
